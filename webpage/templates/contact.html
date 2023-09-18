@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Contact Page
+{% endblock %}
+
+{% block page_content %}
+    <div class = "text-center">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Have any questions or concerns? Please submit a ticket here.</p>
+            <br>
+            <form method="POST" style="color:white">
+                {{ form.hidden_tag() }}
+                {{ form.name(class="form-control", placeholder="Name") }}
+                <br>
+                <br>
+                {{ form.phone(class="form-control", placeholder="Phone Number") }}
+                <br>
+                <br>
+                {{ form.message(class="form-control", placeholder="Message") }}
+                <br>
+                <br>
+                {{ form.submit(class="btn btn-primary") }}
+            </form> 
+        </div>
+    </div>
+{% endblock %}
